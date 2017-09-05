@@ -1,73 +1,58 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+ 
     <h:head>
-        <title>Fetin 2017</title>
-        <h:outputStylesheet name="bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+        <f:facet name="first">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />		
+ 
+            <title>SolidariMap</title>
+        </f:facet>
+ 
+        <f:facet name="middle">
+            <h:outputStylesheet name="bootstrap/css/bootstrap.css" />
+            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" />
+            
+            <h:outputScript name="bootstrap/js/bootstrap.js" />
+        </f:facet>
+        
+        <f:facet name="last">
+ 
+        </f:facet>
+ 
     </h:head>
     <h:body>
-        <h:form>
-            <p:growl id="messages"/>
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Navbar</a>
 
-            <p:menubar>
-                <p:submenu label="File" icon="ui-icon-document">
-                    <p:submenu label="New" icon="ui-icon-contact">
-                        <p:menuitem value="Project" url="#" />
-                        <p:menuitem value="Other" url="#" />
-                    </p:submenu>
-                    <p:menuitem value="Open" url="#" />
-                    <p:separator />
-                    <p:menuitem value="Quit" url="#" />
-                </p:submenu>
-
-                <p:submenu label="Edit" icon="ui-icon-pencil">
-                    <p:menuitem value="Undo" url="#" icon="ui-icon-arrowreturnthick-1-w" />
-                    <p:menuitem value="Redo" url="#" icon="ui-icon-arrowreturnthick-1-e" />
-                </p:submenu>
-
-                <p:submenu label="Help" icon="ui-icon-help">
-                    <p:menuitem value="Contents" url="#" />
-                    <p:submenu label="Search" icon="ui-icon-search">
-                        <p:submenu label="Text">
-                            <p:menuitem value="Workspace" url="#" />
-                        </p:submenu>
-                        <p:menuitem value="File" url="#" />
-                    </p:submenu>
-                </p:submenu>
-
-                <p:submenu label="Actions" icon="ui-icon-gear">
-                    <p:submenu label="Ajax" icon="ui-icon-refresh">
-                        <p:menuitem value="Save" actionListener="#{menuView.save}" icon="ui-icon-disk" update="messages"/>
-                        <p:menuitem value="Update" actionListener="#{menuView.update}" icon="ui-icon-arrowrefresh-1-w" update="messages"/>
-                    </p:submenu>
-                    <p:submenu label="Non-Ajax" icon="ui-icon-newwin">
-                        <p:menuitem value="Delete" actionListener="#{menuView.delete}" icon="ui-icon-close" update="messages" ajax="false"/>
-                    </p:submenu>
-                </p:submenu>
-
-                <p:menuitem value="Quit" url="http://www.primefaces.org" icon="ui-icon-close" />
-
-                <f:facet name="options">
-                    <p:inputText style="margin-right:10px" placeholder="Search"/>
-                    <p:commandButton type="button" value="Logout" icon="ui-icon-extlink" styleClass="btn"/>
-                </f:facet>
-            </p:menubar>
-        </h:form>
-        <h:form styleClass="form-inline">           
-            <p:editor id="editor" widgetVar="editorWidget" value="#{editorView.text}" width="600" />
-
-            <h:panelGrid columns="2" style="margin-top: 10px">
-                <p:commandButton value="Submit" update="display" oncomplete="PF('dlg').show()" icon="ui-icon-disk" />
-
-                <p:commandButton value="Clear" type="button" onclick="PF('editorWidget').clear();" icon="ui-icon-close" />
-            </h:panelGrid>
-
-            <p:dialog header="Content" widgetVar="dlg" showEffect="fade" hideEffect="fade">
-                <h:outputText id="display" value="#{editorView.text}" escape="false" />
-            </p:dialog>
-        </h:form> 
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="text" placeholder="Search"></input>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
     </h:body>
 </html>
+ 
