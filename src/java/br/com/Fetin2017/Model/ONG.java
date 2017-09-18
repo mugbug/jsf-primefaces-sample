@@ -10,6 +10,7 @@ package br.com.Fetin2017.Model;
  * @author Leonardo Saldanha
  */
 public class ONG {
+<<<<<<< HEAD
     private int id;
     private String name;
     private String site_url;
@@ -17,6 +18,16 @@ public class ONG {
     private String longitude;
     private String address;
     private int location_id;
+=======
+    private int id = 0;
+    private String name = "";
+    private String site_url = "";
+    private String latitude = "";
+    private String longitude = "";
+    private String address = "";
+    private int location_id = 0;
+    
+>>>>>>> backup
     
     public ONG(int id, 
            String name, 
@@ -34,6 +45,12 @@ public class ONG {
         this.location_id = location_id;
     }
 
+<<<<<<< HEAD
+=======
+    public ONG() {
+    }
+
+>>>>>>> backup
     //Getters
     public int getId()           {return id;}
     public String getName()      {return name;}
