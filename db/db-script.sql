@@ -21,10 +21,10 @@ USE `mydb` ;
 -- Table `mydb`.`Location`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`Location` (
-  `idAddress` INT NOT NULL,
-  `country` VARCHAR(45) NULL,
-  `state` VARCHAR(45) NULL,
-  `city` VARCHAR(45) NULL,
+  `idAddress` INT NOT NULL AUTO_INCREMENT,
+  `country` VARCHAR(45) NOT NULL,
+  `state` VARCHAR(45) NOT NULL,
+  `city` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idAddress`))
 ENGINE = InnoDB;
 
@@ -33,14 +33,15 @@ ENGINE = InnoDB;
 -- Table `mydb`.`ONG`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`ONG` (
-  `idONG` INT NOT NULL,
-  `name` VARCHAR(45) NULL,
-  `site-url` VARCHAR(45) NULL,
-  `latitude` VARCHAR(45) NULL,
-  `longitude` VARCHAR(45) NULL,
-  `address` VARCHAR(45) NULL,
+  `idONG` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `site-url` VARCHAR(45) NOT NULL,
+  `latitude` VARCHAR(45) NOT NULL,
+  `longitude` VARCHAR(45) NOT NULL,
+  `address` VARCHAR(45) NOT NULL,
   `Location_idAddress` INT NOT NULL,
   PRIMARY KEY (`idONG`, `Location_idAddress`),
+  UNIQUE KEY `name_UNIQUE` (`name`),
   INDEX `fk_ONG_Location_idx` (`Location_idAddress` ASC),
   CONSTRAINT `fk_ONG_Location`
     FOREIGN KEY (`Location_idAddress`)
