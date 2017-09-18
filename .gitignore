@@ -1,0 +1,5 @@
+/dist/
+/build/web/WEB-INF/classes/br/
+/build/web/WEB-INF/lib/mysql-connector-java-5.1.44-bin.jar
+/lib/
+/src/java/
