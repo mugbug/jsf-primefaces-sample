@@ -194,15 +194,7 @@
                 </div>
             </div>
             <div class="search-input form-row ui-g ui-fluid">
-                <div class="ui-g-12 ui-md-2"></div>
-                <div class="states-dropdown ui-g-12 ui-md-3">
-                    <p:inputText type="text" class="form-control" placeholder="Estado" 
-                           id="state" value="#{ongBean.ong.state}"></p:inputText>
-                </div>
-                <div class="search-input-field ui-g-12 ui-md-4">
-                    <p:inputText type="text" class="form-control" placeholder="Cidade" 
-                           id="city" value="#{ongBean.ong.city}"></p:inputText>
-                </div>
+                
                 <div class="search-input-field ui-g-12 ui-md-1">
                     <h:commandButton class="btn" actionListener="#{ongBean.insert}"
                                      value="Submeter" action="#{ongBean.clear}"/>
@@ -223,14 +215,7 @@
                     <p:column headerText="Endereço" style="text-align: center">
                             <h:outputText value="#{ong.address}" />
                     </p:column>
-
-                    <p:column headerText="Estado" style="text-align: center">
-                            <h:outputText value="#{ong.state}" />
-                    </p:column>
-
-                    <p:column headerText="Cidade" style="text-align: center">
-                            <h:outputText value="#{usr.city}" />
-                    </p:column>
+                    
 
                     <p:column style="text-align: center">
                             <p:commandButton id="detailButton" icon="ui-icon-search" update=":form:detailDisplay" oncomplete="detailWidget.show()">
