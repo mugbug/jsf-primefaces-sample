@@ -44,8 +44,7 @@ public class ONGDAO {
     
     public void insert(ONG ong) {
         try {
-            this.ong = ong;
-            
+//            this.ong = ong;
             statement = connection.prepareStatement("INSERT INTO ONG VALUES (default, ?, ?, ?, ?, ?, default)");
             preparedStatement.setString(1, ong.getName());
             preparedStatement.setString(2, ong.getSite_url());
@@ -59,7 +58,7 @@ public class ONGDAO {
             
             resultSet = preparedStatement.executeQuery();
             
-            System.out.println("\nINSERT");
+//            System.out.println("\nINSERT");
             
             writeResultSet(resultSet);
             //insert data

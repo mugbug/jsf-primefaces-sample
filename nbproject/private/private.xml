@@ -3,9 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/pedro/Documents/dev/java/jsf-primefaces-sample/src/java/br/com/Fetin2017/Model/ONG.java</file>
+            <file>file:/home/pedro/Documents/dev/java/jsf-primefaces-sample/web/resources/css/general-text.css</file>
+            <file>file:/home/pedro/Documents/dev/java/jsf-primefaces-sample/web/resources/js/scrollTo.js</file>
+            <file>file:/home/pedro/Documents/dev/java/jsf-primefaces-sample/web/resources/css/map.css</file>
+            <file>file:/home/pedro/Documents/dev/java/jsf-primefaces-sample/web/resources/css/footer.css</file>
+            <file>file:/home/pedro/Documents/dev/java/jsf-primefaces-sample/web/resources/css/about.css</file>
             <file>file:/home/pedro/Documents/dev/java/jsf-primefaces-sample/web/index.xhtml</file>
-            <file>file:/home/pedro/Documents/dev/java/jsf-primefaces-sample/src/java/br/com/Fetin2017/Controller/DAO/ONGDAO.java</file>
+            <file>file:/home/pedro/Documents/dev/java/jsf-primefaces-sample/web/resources/css/categories.css</file>
+            <file>file:/home/pedro/Documents/dev/java/jsf-primefaces-sample/web/resources/js/custom-map.js</file>
+            <file>file:/home/pedro/Documents/dev/java/jsf-primefaces-sample/web/resources/css/pres-banner.css</file>
+            <file>file:/home/pedro/Documents/dev/java/jsf-primefaces-sample/web/resources/css/project-section.css</file>
+            <file>file:/home/pedro/Documents/dev/java/jsf-primefaces-sample/web/resources/css/custom-navbar.css</file>
         </group>
     </open-files>
 </project-private>

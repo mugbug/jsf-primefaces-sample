@@ -29,24 +29,24 @@ public class MySQLConnection {
             Class.forName(driverName);
             
             //Database metadata
-            String serverName = "localhost";
-            String database   = "mysql";
-            String url = "jbdc:mysql://" + serverName + "/" + database;
+            String serverName = "localhost:3306";
+            String database   = "mydb";
+            String url = "jdbc:mysql://" + serverName + "/" + database + "?autoReconnect=true&useSSL=false";
             
             //Database instance credentials
             String username = "root";
-            String password = "Fetin2017";
+            String password = "Petcovic10";
             
             connection = DriverManager.getConnection(url, username, password);
             
             //Connection test
             if (connection != null) {
                 connectionStatus = "Database was connected succesfully";
+                
             }
             else {
                 connectionStatus = "Could not connect to database";
             }
-            
             return connection;
         }
         catch (ClassNotFoundException e) {
